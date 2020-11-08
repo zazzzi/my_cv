@@ -10,23 +10,36 @@ body, html {
 }
 
 /*  universal classes */
+
+@media only screen and (max-width: 600px) {
+    .showSmaller {
+        display: flex;
+    }
+    .hiddenSmaller {
+        display: none;
+    }
+}
+
+.hiddenDesktop {
+    display: none;
+}
+
 .flex {
     display: flex;
 }
+
 .center {
     justify-content: center;
     align-items: center;
 }
-.hiddenDesktop {
-    display: none;
-}
+
 .logo {
     height: 32px;
     width: 32px;
 }
 
-
 /*  header  */
+
 header {
     z-index: 999;
     position: fixed;
@@ -37,38 +50,33 @@ header {
     justify-content: space-between;
     align-items: center;
 }
+
 .navMenu {
     margin-left: 1rem;
 }
+
 .headerLogo h2 {
     margin-right: 1rem;
-    padding: 0;  
+    padding: 0;
 }
-.navigation h2 {
-    margin: 0 1rem 0 1rem ;
-}
-.navigation button {
-    margin: 0 1rem 0 1rem ;
 
-    background-color: transparent;
-    border: none;   
+.navigation h2 {
+    margin: 0 1rem 0 1rem;
 }
+
+.navigation button {
+    margin: 0 1rem 0 1rem;
+    background-color: transparent;
+    border: none;
+}
+
 .marginLR {
     margin: 0 0.2rem 0 0.2rem;
 }
 
-/* Media queries for header */
-@media only screen and (max-width: 600px) {
-    .showSmaller {
-        display: flex;
-    }
-    .hiddenSmaller {
-        display: none;
-    }
-  }
-
 /* footer */
-footer  {
+
+footer {
     position: fixed;
     bottom: 0;
     height: 3rem;
@@ -77,12 +85,14 @@ footer  {
 }
 
 /* Main content  */
+
 main {
     height: 100%;
 }
+
 .mainContent {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(30rem, 2fr));
     grid-template-rows: auto;
     justify-items: center;
 }
