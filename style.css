@@ -9,16 +9,11 @@ body, html {
     height: 100%;
 }
 
-/*  universal classes */
-
-@media only screen and (max-width: 600px) {
-    .showSmaller {
-        display: flex;
-    }
-    .hiddenSmaller {
-        display: none;
-    }
+:root {
+    --red-color: #7D0606
 }
+
+/*#region Universal Classes */
 
 .hiddenDesktop {
     display: none;
@@ -38,7 +33,18 @@ body, html {
     width: 32px;
 }
 
-/*  header  */
+/*#endregion Universal Classes */
+
+/*#region Header  */
+
+@media only screen and (max-width: 600px) {
+    .showSmaller {
+        display: flex;
+    }
+    .hiddenSmaller {
+        display: none;
+    }
+}
 
 header {
     z-index: 999;
@@ -60,21 +66,51 @@ header {
     padding: 0;
 }
 
-.navigation h2 {
-    margin: 0 1rem 0 1rem;
+.zazziLogo {
+    height: 40px;
+    margin: 0 1rem 0 3rem;
+}
+
+.navigation {
+    height: 4rem;
 }
 
 .navigation button {
-    margin: 0 1rem 0 1rem;
+    margin: 0 1.2rem 0 1.2rem;
+    font-size: 1rem;
+    height: 100%;
     background-color: transparent;
     border: none;
+    transition: font-size .2s ease-in-out;
+    color: var(--red-color);
 }
 
-.marginLR {
-    margin: 0 0.2rem 0 0.2rem;
+.navigation button:hover {
+    font-size: 150%;
+    background-color: var(--red-color);
+    color: white;
 }
 
-/* footer */
+.socLinks {
+    margin-right: 3rem;
+}
+
+.socLinks a {
+    margin: 0 0.3rem 0 0.3rem;
+    transition: all .2s ease-in-out;
+}
+
+.socLinks a:hover {
+    transform: scale(1.1);
+}
+
+.socLinks a:visited {
+    color: black;
+}
+
+/*#endregion Header */
+
+/*#region Footer */
 
 footer {
     position: fixed;
@@ -84,7 +120,9 @@ footer {
     background-color: antiquewhite;
 }
 
-/* Main content  */
+/*#endregion Footer  */
+
+/*#region Main content   */
 
 main {
     height: 100%;
@@ -96,3 +134,5 @@ main {
     grid-template-rows: auto;
     justify-items: center;
 }
+
+/*#endregion Main Content */
