@@ -8,7 +8,7 @@
     <title>Sebastian Zazzi</title>
 
     <!-- Script -->
-    <script src="./main.js"></script>
+    <script defer src="./main.js"></script>
 
     <!-- stylesheet -->
     <link rel="stylesheet" href="style.css">
@@ -24,38 +24,54 @@
 
         <!-- div for menu -->
         <div class="navMenu">
-            <!-- burger meny for smaller screens -->
-            <div class="hiddenDesktop showSmaller">
-                <i class="fas fa-bars fa-2x"></i>
-            </div>
+
             <!-- menu for larger screens -->
             <div class="navigation flex center hiddenSmaller">
-                <img class="zazziLogo" src="./imgs/zazzi_logo.png" alt="">
-                <button>About me</button>
-                <button>Experience</button>
-                <button>Future</button>
+                <a href=""><img class="zazziLogo" src="./imgs/zazzi_logo.png" alt="zazzi.logo"></a>
+                <a class="linkEffect" href="">About me</a>
+                <a class="linkEffect" href="">Experience</a>
+                <a class="linkEffect" href="">Future</a>
             </div>
-        </div>
 
-        <!-- logo for smaller screens -->
-        <div class="headerLogo hiddenDesktop showSmaller">
-            <img class="zazziLogo" src="./imgs/zazzi_logo.png" alt="zazzi.logo">
+
+            <!-- burger meny for smaller screens -->
+            <div class="hiddenDesktop showSmaller burgerContainer">
+                <button id="burger" class="burgerButton"><i class="fas fa-bars fa-3x"></i></button>
+                <div id="innerBurger" class="burgerNav flex center">
+
+                    <ul>
+                        <li><a href=""><h2>About me</h2></a></li>
+                        <li><a href=""><h2>Experience</h2></a></li>
+                        <li><a href=""><h2>Future</h2></a></li>
+                    </ul>
+                    <div class="flex">
+                        <a class="socLinksBurger" href=""><img class="logo marginLR" src="./imgs/github.webp" alt="github.logo"></a>
+                        <a class="socLinksBurger" href=""><img class="logo marginLR" src="./imgs/linkedIn.png" alt="linkedIn.logo"></a>
+                        <a class="socLinksBurger" href=""><i class="far fa-envelope fa-2x marginLR"></i></a>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!-- social media for larger screens -->
         <div class="socLinks flex hiddenSmaller">
             <a href=""><img class="logo marginLR" src="./imgs/github.webp" alt="github.logo"></a>
             <a href=""><img class="logo marginLR" src="./imgs/linkedIn.png" alt="linkedIn.logo"></a>
-            <a href=""><i class="far fa-envelope fa-2x marginLR"></i></a>   
+            <a href=""><i class="far fa-envelope fa-2x marginLR"></i></a>
         </div>
+        <!-- logo for smaller screens -->
+        <div class="headerLogo hiddenDesktop showSmaller">
+            <a href=""><img class="zazziLogo" src="./imgs/zazzi_logo.png" alt="zazzi.logo"></a>
+        </div>
+
 
     </header>
 
     <!-- Main content starts here  -->
-    <main class="flex center">
+    <main class="flex center blurEffect">
         <div class="mainContent">
             <div>
-                <img src="./imgs/landing-portrait.PNG" alt="szazibild.jpg">
+                <img src="./imgs/landing-portrait.PNG" alt="szazzibild.jpg">
             </div>
             <div>
                 <h2>Sebastian Zazzi Jademyr</h2>
@@ -68,7 +84,7 @@
     </main>
 
     <!-- Footer starts here -->
-    <footer>
+    <footer class="blurEffect">
         <div class="footerContainer flex center">
             <p>Contact: sebastian@zazzi.se</p>
         </div>
