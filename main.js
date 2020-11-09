@@ -21,8 +21,7 @@ function openBurger() {
     const main = document.querySelector('main');
     const footer = document.querySelector('footer')
 
-    navbar.classList.toggle("showBurgerNav");
-    burger.classList.toggle("closedBurgerNav");
+    navbar.classList.toggle('showBurgerNav');
     main.classList.toggle('blurEffects');
     footer.classList.toggle('blurEffects')
 }

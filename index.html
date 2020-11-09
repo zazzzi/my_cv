@@ -23,7 +23,7 @@
     <header class="flex">
 
         <!-- div for menu -->
-        <div class="navMenu">
+        <div class="navMenu flex center">
 
             <!-- menu for larger screens -->
             <div class="navigation flex center hiddenSmaller">
@@ -34,31 +34,27 @@
             </div>
 
 
-            <!-- burger meny for smaller screens -->
-            <div class="hiddenDesktop showSmaller burgerContainer">
-                <button id="burger" class="burgerButton"><i class="fas fa-bars fa-3x"></i></button>
-                <div id="innerBurger" class="burgerNav flex center">
+        </div>
+        
+        <!-- burger meny for smaller screens -->
+        <div class="hiddenDesktop showSmaller burgerContainer">
+            <button id="burger" class="burgerButton"><i class="fas fa-bars fa-3x"></i></button>
+            <div id="innerBurger" class="burgerNav flex center">
 
-                    <ul>
-                        <li><a href=""><h2>About me</h2></a></li>
-                        <li><a href=""><h2>Experience</h2></a></li>
-                        <li><a href=""><h2>Future</h2></a></li>
-                    </ul>
-                    <div class="flex">
-                        <a class="socLinksBurger" href=""><img class="logo marginLR" src="./imgs/github.webp" alt="github.logo"></a>
-                        <a class="socLinksBurger" href=""><img class="logo marginLR" src="./imgs/linkedIn.png" alt="linkedIn.logo"></a>
-                        <a class="socLinksBurger" href=""><i class="far fa-envelope fa-2x marginLR"></i></a>
-                    </div>
+                <ul>
+                    <li><a href=""><h2>About me</h2></a></li>
+                    <li><a href=""><h2>Experience</h2></a></li>
+                    <li><a href=""><h2>Future</h2></a></li>
+                </ul>
+                <div class="flex">
+                    <a class="socLinksBurger" href=""><img class="logo marginLR" src="./imgs/github.webp" alt="github.logo"></a>
+                    <a class="socLinksBurger" href=""><img class="logo marginLR" src="./imgs/linkedIn.png" alt="linkedIn.logo"></a>
+                    <a class="socLinksBurger" href=""><i class="far fa-envelope fa-2x marginLR"></i></a>
                 </div>
             </div>
         </div>
-
-        <!-- social media for larger screens -->
-        <div class="socLinks flex hiddenSmaller">
-            <a href=""><img class="logo marginLR" src="./imgs/github.webp" alt="github.logo"></a>
-            <a href=""><img class="logo marginLR" src="./imgs/linkedIn.png" alt="linkedIn.logo"></a>
-            <a href=""><i class="far fa-envelope fa-2x marginLR"></i></a>
-        </div>
+        
+      
         <!-- logo for smaller screens -->
         <div class="headerLogo hiddenDesktop showSmaller">
             <a href=""><img class="zazziLogo" src="./imgs/zazzi_logo.png" alt="zazzi.logo"></a>
@@ -86,7 +82,13 @@
     <!-- Footer starts here -->
     <footer class="blurEffect">
         <div class="footerContainer flex center">
-            <p>Contact: sebastian@zazzi.se</p>
+            <div class="socLinks flex center hiddenSmaller">
+                <p>Contact: sebastian@zazzi.se | links:</p>
+              
+                <a href=""><img class="logo marginLR" src="./imgs/github.webp" alt="github.logo"></a>
+                <a href=""><img class="logo marginLR" src="./imgs/linkedIn.png" alt="linkedIn.logo"></a>
+
+            </div>
         </div>
     </footer>
 </body>
