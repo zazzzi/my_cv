@@ -192,6 +192,9 @@ footer {
 
 main {
     height: 100%;
+    flex-direction: column;
+    margin: 0rem;
+    
 }
 .zazziImage {
     width: 100%;
@@ -201,9 +204,21 @@ main {
 
 .mainContent {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(30rem, 2fr));
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
     grid-template-rows: auto;
     justify-items: center;
+    margin-bottom: 4rem;
+}
+.mainContentText {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(40rem, 1fr));
+    grid-template-rows: auto;
+    justify-items: center;
+    margin: 4rem;
+}
+.mainText {
+    display: inline-block;
+    margin: -0.2em;
 }
 
 /*#endregion Main Content */
