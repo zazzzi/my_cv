@@ -1,4 +1,4 @@
-window.addEventListener(onload, loadFunctions());
+window.addEventListener('load', loadFunctions);
 
 function loadFunctions() {
     console.log('Im sorry Dave, Im afraid i cant do that.');

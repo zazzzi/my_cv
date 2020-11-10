@@ -32,7 +32,12 @@ body, html {
     height: 32px;
     width: 32px;
 }
-
+.far:visited {
+    color: black;
+}
+.far {
+    color: black;
+}
 /*#endregion Universal Classes */
 
 /*#region Header  */
@@ -93,26 +98,13 @@ header {
     background-color: var(--red-color);
     color: white;
     width: 10rem;
-}
 
-
-.socLinks a {
-    margin: 0 0.3rem 0 0.3rem;
-    transition: all .2s ease-in-out;
-}
-
-.socLinks a:hover {
-    transform: scale(1.1);
-}
-
-.socLinks a:visited {
-    color: black;
 }
 
 /* Burger menu css */
-
-
-
+.headerLogo {
+    position: absolute;
+}
 .burgerButton {
     position: absolute;
     background-color: transparent;
@@ -120,6 +112,7 @@ header {
     z-index: 1000;
     left: 0;
     top: 0;
+    margin: 0.4rem;
 }
 
 .burgerNav {
@@ -142,8 +135,8 @@ header {
 }
 
 .burgerNav ul>li {
-    padding: 1rem;
-    font-size: 2rem%;
+    padding: 0.5rem;
+    font-size: 2rem;
 }
 
 .burgerNav ul>li>a {
@@ -154,9 +147,11 @@ header {
     color: black;
 }
 
+
 .socLinksBurger {
     padding: 1rem;
 }
+
 
 .showBurgerNav {
     transform: translateY(0);
@@ -176,12 +171,19 @@ footer {
     bottom: 0;
     height: 3.5rem;
     width: 100%;
- 
 }
 
-.socLinks {
-    margin:0.5rem 3rem 3rem;
+.socLinks a {
+    margin: 0 0.3rem 0 0.3rem;
+    transition: all .2s ease-in-out;
+}
 
+.socLinks a:hover {
+    transform: scale(1.1);
+}
+
+.socLinks a:visited {
+    color: black;
 }
 
 /*#endregion Footer  */
@@ -190,6 +192,11 @@ footer {
 
 main {
     height: 100%;
+}
+.zazziImage {
+    width: 100%;
+    height: auto;
+    margin-top: 4rem;
 }
 
 .mainContent {
