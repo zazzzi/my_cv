@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sebastian Zazzi</title>
+
+    <!-- Script -->
+    <script src="./main.js"></script>
+
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Fontawesome -->
+    <script src="https://kit.fontawesome.com/190f3e60cc.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <!-- Header starts here -->
+    <header class="flex">
+
+        <!-- div for menu -->
+        <div class="navMenu flex center">
+
+            <!-- menu for larger screens -->
+            <div class="navigation flex center hiddenSmaller">
+                <a href="./index.html"><img class="zazziLogo" src="./imgs/zazzi_logo.png" alt="zazzi.logo"></a>
+                <a class="linkEffect" href="./life.html">Life</a>
+                <a class="linkEffect" href="./experience.html">Experience</a>
+                <a class="linkEffect" href="./future.html">Future</a>
+            </div>
+
+
+        </div>
+
+        <!-- burger meny for smaller screens -->
+        <div class="hiddenDesktop showSmaller burgerContainer">
+            <button id="burger" class="burgerButton"><i class="fas fa-bars fa-3x"></i></button>
+            <div id="innerBurger" class="burgerNav flex center">
+
+                <ul>
+                    <li><a href="./life.html">
+                            <h2>Life</h2>
+                        </a></li>
+                    <li><a href="./experience.html">
+                            <h2>Experience</h2>
+                        </a></li>
+                    <li><a href="./future.html">
+                            <h2>Future</h2>
+                        </a></li>
+                </ul>
+                <div class="flex">
+                    <a class="socLinksBurger" href="https://github.com/zazzzi" target="blank"><img class="logo marginLR"
+                            src="./imgs/github.webp" alt="github.logo"></a>
+                    <a class="socLinksBurger" href="https://www.linkedin.com/in/sebastian-zazzi-022a36134/"
+                        target="blank"><img class="logo marginLR" src="./imgs/linkedIn.png" alt="linkedIn.logo"></a>
+                    <a class="socLinksBurger" href="mailto: sebastian@zazzi.se" target="blank"><i
+                            class="far fa-envelope fa-2x marginLR"></i></a>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- logo for smaller screens -->
+        <div class="headerLogo hiddenDesktop showSmaller">
+            <a href="./index.html"><img class="zazziLogo" src="./imgs/zazzi_logo.png" alt="zazzi.logo"></a>
+        </div>
+
+
+    </header>
+
+    <!-- Main content starts here  -->
+    <main class="flex center blurEffect">
+        <div class="flex center">
+
+            <!-- game starts here -->
+
+            <div id="game" class="game">
+                <div id="jumper" class="jumperStyling"></div>
+
+                <div id="obstacle" class="obstacleStyling"></div>
+            </div>
+            <button id="gameBtn">Start</button>
+            <p>Score: <span id="score"></span></p>
+
+        </div>
+    </main>
+
+    <!-- Footer starts here -->
+    <footer class="blurEffect">
+        <div class="footerContainer flex center">
+            <div class="socLinks flex center hiddenSmaller">
+                <p>Contact: sebastian@zazzi.se | links:</p>
+
+                <a href="https://github.com/zazzzi" target="blank"><img class="logo marginLR" src="./imgs/github.webp"
+                        alt="github.logo"></a>
+                <a href="https://www.linkedin.com/in/sebastian-zazzi-022a36134/" target="blank"><img
+                        class="logo marginLR" src="./imgs/linkedIn.png" alt="linkedIn.logo"></a>
+
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

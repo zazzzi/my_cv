@@ -4,7 +4,7 @@
 }
 
 body, html {
-    margin: 0;
+    margin: auto;
     padding: 0;
     height: 100%;
 }
@@ -32,12 +32,18 @@ body, html {
     height: 32px;
     width: 32px;
 }
+
 .far:visited {
     color: black;
 }
+
 .far {
     color: black;
 }
+.column {
+    flex-direction: column;
+}
+
 /*#endregion Universal Classes */
 
 /*#region Header  */
@@ -98,13 +104,14 @@ header {
     background-color: var(--red-color);
     color: white;
     width: 10rem;
-
 }
 
 /* Burger menu css */
+
 .headerLogo {
     position: absolute;
 }
+
 .burgerButton {
     position: absolute;
     background-color: transparent;
@@ -147,11 +154,9 @@ header {
     color: black;
 }
 
-
 .socLinksBurger {
     padding: 1rem;
 }
-
 
 .showBurgerNav {
     transform: translateY(0);
@@ -171,6 +176,7 @@ footer {
     bottom: 0;
     height: 3.5rem;
     width: 100%;
+    background-color: blanchedalmond;
 }
 
 .socLinks a {
@@ -194,8 +200,8 @@ main {
     height: 100%;
     flex-direction: column;
     margin: 0rem;
-    
 }
+
 .zazziImage {
     width: 100%;
     height: auto;
@@ -209,6 +215,7 @@ main {
     justify-items: center;
     margin-bottom: 4rem;
 }
+
 .mainContentText {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(40rem, 1fr));
@@ -216,9 +223,81 @@ main {
     justify-items: center;
     margin: 4rem;
 }
+
+@media only screen and (max-width: 600px) {
+    .mainContentText {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+        grid-template-rows: auto;
+        justify-items: center;
+        margin: 4rem;
+    }
+}
+
 .mainText {
     display: inline-block;
     margin: -0.2em;
+}
+
+/* game styling  */
+
+.game {
+    width: 32rem;
+    height: 13rem;
+    border: 1px solid black;
+    margin: auto;
+    cursor: pointer;
+}
+
+.jumperStyling {
+    width: 2rem;
+    height: 5rem;
+    background-color: var(--red-color);
+    position: relative;
+    top: calc(13rem - 5rem);
+
+}
+
+.animateJump {
+    animation: jump 0.3s linear;
+}
+
+@keyframes jump {
+    0% {
+        top: calc(13rem - 5rem);
+    }
+    30% {
+        top: calc(13rem - 8rem);
+    }
+    70% {
+        top: calc(13rem - 8rem);
+    }
+    100% {
+        top: calc(13rem - 5rem);
+    }
+}
+
+.obstacleStyling {
+    background-color: black;
+    width: 2rem;
+    height: 2rem;
+    position: relative;
+    top: 6rem;
+    left: 32rem;
+    animation: block 1s infinite linear;
+}
+
+@keyframes block {
+    0% {
+        left: 32rem;
+    }
+    100% {
+        left: -2rem;
+    }
+}
+
+main > p {
+    text-align: center;
 }
 
 /*#endregion Main Content */
