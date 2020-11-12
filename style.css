@@ -6,7 +6,8 @@
 body, html {
     margin: auto;
     padding: 0;
-    height: 100%;
+    margin: 0;
+
 }
 
 :root {
@@ -44,7 +45,15 @@ body, html {
 .column {
     flex-direction: column;
 }
-
+.centerText {
+    text-align: center;
+}
+.w100 {
+    width: 100%;
+}
+.h100 {
+    height: 100%;
+}
 /*#endregion Universal Classes */
 
 /*#region Header  */
@@ -197,15 +206,18 @@ footer {
 .socLinks a:visited {
     color: black;
 }
-
+@media only screen and (max-width: 600px) {
+    footer {
+        display: none;
+    }
+}
 /*#endregion Footer  */
 
 /*#region Main content   */
 
 main {
-    height: 100%;
     flex-direction: column;
-    margin: 0rem;
+    margin: 7rem;
 }
 
 .zazziImage {
@@ -228,28 +240,42 @@ main {
     grid-template-rows: auto;
     justify-items: center;
     margin: 4rem;
+    margin-right: 2rem;
 }
-
 @media only screen and (max-width: 600px) {
     .mainContentText {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(100rem, 1fr));
         grid-template-rows: auto;
         justify-items: center;
-        margin: 4rem;
+        margin: 2rem;
+    }
+    .mainContentText p {
+        text-align: center;
+    }
+
+}@media only screen and (max-width: 800px) {
+    .mainContentText {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+        grid-template-rows: auto;
+        justify-items: center;
+        margin: 2rem;
     }
 }
 
+.projectsContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+    grid-template-rows: auto;
+    justify-items: center;
+}
 .mainText {
     display: inline-block;
     margin: -0.2em;
 }
 
 /*#region Game*/
-
-.gameContainer {
-    margin-top: 7rem;
-}
 
 .gameContainer>button {
     margin-top: 1rem;

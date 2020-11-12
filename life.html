@@ -74,22 +74,25 @@
 
     <!-- Main content starts here  -->
     <main class="flex center blurEffect">
+        <div class="projectsContainer">
 
-        <!-- game starts here -->
-        <div class=" gameContainer flex center column">
-            <h2>Jumping block game</h2>
-            <p>Press start to start the game. <br> Click inside the black border to make the "character" jump.</p>
-            <div id="game" class="game">
-                <div id="jumper" class="jumperStyling"></div>
-                <div id="obstacle" class="obstacleStyling"></div>
+            <!-- game starts here -->
+            <div class="gameContainer flex center column">
+                <h2>Jumping block game</h2>
+                <p>Press start to start the game. <br> Click inside the black border to make the "character" jump.</p>
+                <div id="game" class="game">
+                    <div id="jumper" class="jumperStyling"></div>
+                    <div id="obstacle" class="obstacleStyling"></div>
+                </div>
+                <button id="gameBtn">Start</button>
+                <p>Score: <span id="score"></span></p>
             </div>
-            <button id="gameBtn">Start</button>
-            <p>Score: <span id="score"></span></p>
-        </div>
-        <div class="datBoiContainer flex center column">
-            <h2>Dat_boi counter</h2>
-            <p>A quick fun project I made just to learn more about Javascript implementation. Try it on github-pages <a href="https://zazzzi.github.io/dat_boi/">Here!</a></p>
-            <img src="./imgs/dat_boi.PNG" alt="">
+            <div class="datBoiContainer flex center column">
+                <h2>Dat_boi counter</h2>
+                <p class="centerText">A quick fun project I made just to learn more about Javascript implementation. <br> Try it on github-pages
+                    <a href="https://zazzzi.github.io/dat_boi/">Here!</a></p>
+                <img class="w100" src="./imgs/dat_boi.PNG" alt="">
+            </div>
         </div>
     </main>
 
