@@ -8,10 +8,12 @@
     <title>Sebastian Zazzi</title>
 
     <!-- Script -->
+    <script src="./game.js"></script>
     <script src="./main.js"></script>
 
     <!-- stylesheet -->
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./game.css">
 
     <!-- Fontawesome -->
     <script src="https://kit.fontawesome.com/190f3e60cc.js" crossorigin="anonymous"></script>
@@ -28,7 +30,7 @@
             <!-- menu for larger screens -->
             <div class="navigation flex center hiddenSmaller">
                 <a href="./index.html"><img class="zazziLogo" src="./imgs/zazzi_logo.png" alt="zazzi.logo"></a>
-                <a class="linkEffect" href="./life.html">Projects</a>
+                <a class="linkEffect" href="./projects.html">Projects</a>
                 <a class="linkEffect" href="./experience.html">Experience</a>
                 <a class="linkEffect" href="./future.html">Future</a>
             </div>
@@ -42,7 +44,7 @@
             <div id="innerBurger" class="burgerNav flex center">
 
                 <ul>
-                    <li><a href="./life.html">
+                    <li><a href="./projects.html">
                             <h2>Projects</h2>
                         </a></li>
                     <li><a href="./experience.html">
@@ -76,23 +78,46 @@
     <main class="flex center blurEffect">
         <div class="projectsContainer">
 
-            <!-- game starts here -->
-            <div class="gameContainer flex center column">
+            <!-- game card starts here -->
+            <div class="gameContainer card flex center column">
                 <h2>Jumping block game</h2>
-                <p>Press start to start the game. <br> Click inside the black border to make the "character" jump.</p>
+                <p>Press start to start the game. Click inside the black border to make the "character" jump. <br> Exact
+                    values is used to determine collision so game get kinda hard on smaller screens. </p>
                 <div id="game" class="game">
                     <div id="jumper" class="jumperStyling"></div>
                     <div id="obstacle" class="obstacleStyling"></div>
                 </div>
                 <button id="gameBtn">Start</button>
-                <p>Score: <span id="score"></span></p>
+                <p class="score">Score: <span id="score"></span></p>
             </div>
-            <div class="datBoiContainer flex center column">
+
+            <!-- Text Game card -->
+            <div class="datBoiContainer card flex center column">
+                <h2>Text Adventure Game</h2>
+                <p class="centerText"> A text based adventure made for a school assignment. The purpose of the project
+                    was to get into JavaScript coding. Try it out on github-pages
+                    <a target="blank" href="https://zazzzi.github.io/text_game/">Here!</a></p>
+                <img class="cardImg" src="./imgs/text_game.PNG" alt="">
+            </div>
+
+            <!-- Vallgatan 12 card -->
+            <div class="datBoiContainer card flex center column">
+                <h2>Vallgatan 12</h2>
+                <p class="centerText">A project me and my course mate did to get a better understanding of how
+                    responsive web development works. Check out the page
+                    <a target="blank" href="https://zazzzi.github.io/dat_boi/">Here!</a></p>
+                <img class="cardImg" src="./imgs/dat_boi.PNG" alt="">
+            </div>
+
+            <!-- Datboi card -->
+            <div class="datBoiContainer card flex center column">
                 <h2>Dat_boi counter</h2>
-                <p class="centerText">A quick fun project I made just to learn more about Javascript implementation. <br> Try it on github-pages
-                    <a href="https://zazzzi.github.io/dat_boi/">Here!</a></p>
-                <img class="w100" src="./imgs/dat_boi.PNG" alt="">
+                <p class="centerText">A quick fun project I made just to learn more about Javascript implementation.
+                    Try it on github-pages
+                    <a target="blank" href="https://zazzzi.github.io/dat_boi/">Here!</a></p>
+                <img class="cardImg" src="./imgs/dat_boi.PNG" alt="">
             </div>
+
         </div>
     </main>
 

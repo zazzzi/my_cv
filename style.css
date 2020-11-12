@@ -6,8 +6,6 @@
 body, html {
     margin: auto;
     padding: 0;
-    margin: 0;
-
 }
 
 :root {
@@ -45,15 +43,19 @@ body, html {
 .column {
     flex-direction: column;
 }
+
 .centerText {
     text-align: center;
 }
+
 .w100 {
     width: 100%;
 }
+
 .h100 {
     height: 100%;
 }
+
 /*#endregion Universal Classes */
 
 /*#region Header  */
@@ -206,33 +208,35 @@ footer {
 .socLinks a:visited {
     color: black;
 }
+
 @media only screen and (max-width: 600px) {
     footer {
         display: none;
     }
 }
+
 /*#endregion Footer  */
 
 /*#region Main content   */
 
 main {
     flex-direction: column;
-    margin: 7rem;
+}
+
+/*  Styling for the index page  */
+
+.mainContent {
+    height: 100vh;
+    
 }
 
 .zazziImage {
     width: 100%;
     height: auto;
-    margin-top: 4rem;
+    margin: 2rem;
 }
 
-.mainContent {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
-    grid-template-rows: auto;
-    justify-items: center;
-    margin-bottom: 4rem;
-}
+/*  Styling for the experience page */
 
 .mainContentText {
     display: grid;
@@ -240,12 +244,12 @@ main {
     grid-template-rows: auto;
     justify-items: center;
     margin: 4rem;
-    margin-right: 2rem;
 }
+
 @media only screen and (max-width: 600px) {
     .mainContentText {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(100rem, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
         grid-template-rows: auto;
         justify-items: center;
         margin: 2rem;
@@ -253,96 +257,48 @@ main {
     .mainContentText p {
         text-align: center;
     }
+}
 
-}@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 800px) {
     .mainContentText {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
         grid-template-rows: auto;
         justify-items: center;
-        margin: 2rem;
+        margin-top: 5rem;
     }
+}
+
+.mainText {
+    display: inline-block;
+    width: 100%;
+}
+
+/*  Styling for the projects page (the game is placed on this page but styling in separate css file)  */
+
+.card {
+    max-width: 50rem;
+    border: 1px solid var(--red-color);
+    border-radius: 5px;
+    margin: 2rem 0;
+}
+
+.card>p {
+    margin: 2rem;
+}
+
+.cardImg {
+    max-width: 25rem;
+    width: 100%;
+    margin: 1rem;
 }
 
 .projectsContainer {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+    grid-template-columns: repeat, minmax(10rem, 1fr);
     grid-template-rows: auto;
     justify-items: center;
+    margin: 4rem 2rem 2rem 2rem;
 }
-.mainText {
-    display: inline-block;
-    margin: -0.2em;
-}
-
-/*#region Game*/
-
-.gameContainer>button {
-    margin-top: 1rem;
-}
-
-.gameContainer>p {
-    text-align: center;
-}
-
-.game {
-    width: 32rem;
-    height: 13rem;
-    border: 1px solid black;
-    margin: auto;
-    cursor: pointer;
-    overflow: hidden;
-}
-
-.jumperStyling {
-    width: 2rem;
-    height: 5rem;
-    background-color: var(--red-color);
-    position: relative;
-    top: calc(13rem - 5rem);
-}
-
-.animateJump {
-    animation: jump 0.3s linear;
-}
-
-@keyframes jump {
-    0% {
-        top: calc(13rem - 5rem);
-    }
-    30% {
-        top: calc(13rem - 8rem);
-    }
-    70% {
-        top: calc(13rem - 8rem);
-    }
-    100% {
-        top: calc(13rem - 5rem);
-    }
-}
-
-.obstacleStyling {
-    background-color: black;
-    width: 2rem;
-    height: 2rem;
-    position: relative;
-    top: 6rem;
-    left: 32rem;
-}
-
-.animateObstacle {
-    animation: block 1s infinite linear;
-}
-
-@keyframes block {
-    0% {
-        left: 32rem;
-    }
-    100% {
-        left: -2rem;
-    }
-}
-
-/*#endregion Game */
 
 /*#endregion Main Content */

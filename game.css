@@ -1,0 +1,75 @@
+/*#region Game*/
+
+.gameContainer>button {
+    margin-top: 1rem;
+}
+
+.gameContainer>p {
+    text-align: center;
+}
+
+.game {
+    width: 32rem;
+    height: 13rem;
+    border: 1px solid black;
+    margin: auto;
+    cursor: pointer;
+    overflow: hidden;
+}
+@media only screen and (max-width: 535px)  {
+    .game {
+        width: 90%;
+    }
+}
+
+
+.jumperStyling {
+    width: 2rem;
+    height: 5rem;
+    background-color: var(--red-color);
+    position: relative;
+    top: calc(13rem - 5rem);
+}
+
+.animateJump {
+    animation: jump 0.3s linear;
+}
+
+@keyframes jump {
+    0% {
+        top: calc(13rem - 5rem);
+    }
+    30% {
+        top: calc(13rem - 8rem);
+    }
+    70% {
+        top: calc(13rem - 8rem);
+    }
+    100% {
+        top: calc(13rem - 5rem);
+    }
+}
+
+.obstacleStyling {
+    background-color: black;
+    width: 2rem;
+    height: 2rem;
+    position: relative;
+    top: 6rem;
+    left: 32rem;
+}
+
+.animateObstacle {
+    animation: block 1s infinite linear;
+}
+
+@keyframes block {
+    0% {
+        left: 32rem;
+    }
+    100% {
+        left: -2rem;
+    }
+}
+
+/*#endregion Game */
