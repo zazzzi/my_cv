@@ -16,7 +16,7 @@ function loadFunctions() {
 function textAppear() {
     let i = 0;
     const textToBeInjected = 'Hi. I am Front End Developer in learning.'
-    const speed = 60;
+    const speed = 70;
 
     writingText();
 
@@ -24,11 +24,11 @@ function textAppear() {
     /**
      * Function to inject the text as in if being typed
      * The if statement in this function adds the content of textToBeInjected to the h2 element. 
-     * To get the effect of the text being typed, the character with the value of (i) is chosen to be printed, the function then adds 1 to i and runs again. 
+     * To get the effect of the text being typed, the character with the value of (i) is chosen to be printed, the function then adds 1 to i and runs again with a timeout. 
      */
     function writingText() {
         if (i < textToBeInjected.length) {
-            document.getElementById('textField').innerHTML += textToBeInjected.charAt(i); // charAt(i) is used to choose the symbol with the value i from the string textToBeInjected
+            document.getElementById('textField').innerHTML += textToBeInjected.charAt(i); // charAt(i) is used to pick the symbol with the placement corresponding to the value of i from the string textToBeInjected
             i++
             setTimeout(writingText, speed);
         }
