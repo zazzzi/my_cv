@@ -43,8 +43,8 @@ function gameStart() {
      * interval for checking if jumper misses the jump (death)
      */
     const dead = setInterval(() => {
-        const jumperTop = parseInt(window.getComputedStyle(jumper).getPropertyValue('top')); //gets the top value for the jumper from the css (parseInt returns the value as an int, removes the rem)
-        const obstacleLeft = parseInt(window.getComputedStyle(obstacle).getPropertyValue('left')); //gets the left value for the obstacle from the css (parseInt returns the value as an int, removes the rem)
+        const jumperTop = parseInt(window.getComputedStyle(jumper).getPropertyValue('top')); //gets the top value for the jumper from the css (parseInt returns the value as an int, removes the px)
+        const obstacleLeft = parseInt(window.getComputedStyle(obstacle).getPropertyValue('left')); //gets the left value for the obstacle from the css (parseInt returns the value as an int, removes the px)
 
         /*
          * runs and interval and checks the jumpers top value and obstacle left value to check for death.

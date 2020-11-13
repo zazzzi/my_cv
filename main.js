@@ -2,7 +2,13 @@ window.addEventListener('DOMContentLoaded', loadFunctions);
 
 function loadFunctions() {
     getBurger();
-    textAppear();
+
+    /*
+     *only runs the appearing text on the index page 
+     */
+    if (window.location.href.indexOf('index.html') > -1) {
+        textAppear();
+    }
 }
 
 
