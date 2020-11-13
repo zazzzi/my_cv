@@ -1,3 +1,11 @@
+
+window.addEventListener('DOMContentLoaded', loadFunctions);
+
+function loadFunctions() {
+    getGameBtn();
+}
+
+
 //#region Jumping game
 
 function getGameBtn() {
