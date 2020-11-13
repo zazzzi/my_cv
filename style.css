@@ -55,7 +55,9 @@ body, html {
 .h100 {
     height: 100%;
 }
-
+.hidden {
+    display: none;
+}
 /*#endregion Universal Classes */
 
 /*#region Header  */
@@ -237,8 +239,24 @@ main {
 
 .zazziImage {
     width: 100%;
+    max-width: 46rem;
     height: auto;
-    padding: 2rem ;
+    padding: 2rem 2rem 0.2rem 2rem ;
+}
+.coronaButton {
+    margin: 0;
+    background-color: transparent;
+    border: solid 1px var(--red-color);
+    border-radius: 6px;
+    transition: all .2s ease-in-out;
+    
+}
+.coronaButton:hover {
+    background-color: var(--red-color);
+    
+}
+.heightFix {
+    height: 2rem;
 }
 
 /*  Styling for the experience page */
