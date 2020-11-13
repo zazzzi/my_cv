@@ -154,8 +154,13 @@ header {
     padding: 0;
 }
 
+.burgerNav h2 {
+    margin: 0;
+    padding: 0;
+}
+
 .burgerNav ul>li {
-    padding: 0.5rem;
+    padding: 2rem;
     font-size: 2rem;
 }
 
@@ -227,7 +232,6 @@ main {
 
 .mainContent {
     height: 100vh;
-    
 }
 
 .zazziImage {
@@ -243,7 +247,7 @@ main {
     grid-template-columns: repeat(auto-fill, minmax(40rem, 1fr));
     grid-template-rows: auto;
     justify-items: center;
-    margin: 4rem;
+    margin: 6rem;
 }
 
 @media only screen and (max-width: 600px) {
@@ -253,9 +257,6 @@ main {
         grid-template-rows: auto;
         justify-items: center;
         margin: 2rem;
-    }
-    .mainContentText p {
-        text-align: center;
     }
 }
 
@@ -274,6 +275,12 @@ main {
     width: 100%;
 }
 
+.mainText>p {
+    max-width: 90vw;
+    margin: 0;
+    justify-content: center;
+}
+
 /*  Styling for the projects page (the game is placed on this page but styling in separate css file)  */
 
 .card {
@@ -290,7 +297,7 @@ main {
 .cardImg {
     max-width: 25rem;
     width: 100%;
-    margin: 1rem;
+    padding: 1rem;
 }
 
 .projectsContainer {
