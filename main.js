@@ -6,7 +6,7 @@ function loadFunctions() {
     /*
      *only runs the appearing text on the index page 
      */
-    if (window.location.href.indexOf('index.html') > 0) {
+    if (window.location.href.indexOf('/') > 0) {
         textAppear();
     }
 }
