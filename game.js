@@ -17,13 +17,14 @@ function getGameBtn() {
 }
 /**
  * The main game function, here is were the whole game is
+ * defines the different elements 
  */
 function gameStart() {
     const jumper = document.getElementById('jumper');
     const obstacle = document.getElementById('obstacle');
     const gameDiv = document.getElementById('game');
-    let counter = 0;
-    obstacle.classList.add('animateObstacle');
+    let counter = 0; //counter for score
+    obstacle.classList.add('animateObstacle'); //adds the movment animation for the obstacle
     gameDiv.addEventListener('click', jump); //eventlistener for adding the jump to the jumper
 
     /**
