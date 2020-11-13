@@ -46,9 +46,9 @@ function textAppear() {
 
 
     /**
-     * Function to write the text as in if being typed
-     * The if statement in this function adds the content of textToBeInjected the h2 element. 
-     * To get the effect of the text being typed, the character with the value of (i) 
+     * Function to inject the text as in if being typed
+     * The if statement in this function adds the content of textToBeInjected to the h2 element. 
+     * To get the effect of the text being typed, the character with the value of (i) is chosen to be printed, the function then adds 1 to i and runs again. 
      */
     function writingText() {
         if (i < textToBeInjected.length) {

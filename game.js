@@ -8,6 +8,9 @@ function loadFunctions() {
 
 //#region Jumping game
 
+/**
+ * gets the Start button to start the game. 
+ */
 function getGameBtn() {
     const gameBtn = document.getElementById('gameBtn');
     gameBtn.addEventListener('click', gameStart);
@@ -25,8 +28,8 @@ function gameStart() {
 
     /**
      * Function for adding the jumping animation
-     * if animateJump is already on classlist, cant add list 
-     * then sets timeout and removes the class every 500ms
+     * (if animateJump is already on classlist, don't add class)
+     * then setTimeout and removes the class every 500ms
      */
     function jump() {
         if (jumper.classList != 'animateJump') {
@@ -36,7 +39,7 @@ function gameStart() {
             jumper.classList.remove('animateJump');
         }, 500)
     }
-    /**
+    /*
      * interval for checking if jumper misses the jump (death)
      */
     const dead = setInterval(() => {
@@ -49,9 +52,6 @@ function gameStart() {
          * if player is not dead adds score to the counter and continues interval
          */
         if (obstacleLeft < 32 && obstacleLeft > -32 && jumperTop >= 73) {
-            console.log('dead');
-            console.log(obstacleLeft);
-            console.log(jumperTop);
             obstacle.classList.remove('animateObstacle');
             counter = 0;
             clearInterval(dead);
