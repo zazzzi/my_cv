@@ -33,6 +33,7 @@ function openBurger() {
 
 
 //#region Appearing text
+
 /**
  * function to make text appear on the DOM as if its being type out.
  */
@@ -51,11 +52,10 @@ function textAppear() {
      */
     function writingText() {
         if (i < textToBeInjected.length) {
-            document.getElementById('textField').innerHTML += textToBeInjected.charAt(i); // charAt(i) is used to place the symbol with the value i from the string textToBeInjected
+            document.getElementById('textField').innerHTML += textToBeInjected.charAt(i); // charAt(i) is used to choose the symbol with the value i from the string textToBeInjected
             i++
             setTimeout(writingText, speed);
         }
-
     }
 }
 
